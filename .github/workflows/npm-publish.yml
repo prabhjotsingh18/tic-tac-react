@@ -32,7 +32,7 @@ jobs:
           image: summerof98/tic-tac-react
           tags: v1, latest
           registry: docker.io
-          dockerfile: ../Dockerfile
+          dockerfile: ../.
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
