@@ -11,11 +11,26 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - name : checkout code
+        uses: actions/checkout@v3
+      
+      - name : seup node 
+        uses: actions/setup-node@v3
         with:
           node-version: 16
-      - run: npm ci
-      - run: npm test
+      
+      - name : run tests
+        run: npm test
+
+      - name: Build & push Docker image
+        uses: mr-smithers-excellent/docker-build-push@v6
+        with:
+          image: summerof98/tic-tac-react
+          tags: v1, latest
+          registry: docker.io
+          dockerfile: ../Dockerfile
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+
 
 
