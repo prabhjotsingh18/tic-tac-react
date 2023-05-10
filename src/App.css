@@ -6,6 +6,7 @@
 }
 .board-row{
   display:flex;
+  background-color: antiquewhite;
   /* position: fixed;
   left: 50%; */
 }
