@@ -30,7 +30,7 @@ jobs:
         with:
           registry: docker.io
           username: ${{ secrets.DOCKER_USERNAME }}
-          password: ${{ secrets.DOCKER_PASSWORD }}
+          password: ${{ secrets.DOCKER_PASSSWORD }}
 
       - name: Build Docker Image
         run: docker build -t tic-tac-react:v1 .
