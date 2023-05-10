@@ -33,7 +33,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSSWORD }}
 
       - name: Build Docker Image
-        run: docker build -t tic-tac-react:v1 .
+        run: docker build -t summerof98/tic-tac-react:v1 .
 
       - name: Push Docker Image
         run: docker push summerof98/tic-tac-react:v1
