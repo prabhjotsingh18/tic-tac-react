@@ -28,7 +28,7 @@ jobs:
       - uses: mr-smithers-excellent/docker-build-push@v6
         name: Build & push Docker image
         with:
-          image: summerof98/tic-tac-react
+          image: summerof98/docker101tutorial
           tags: v1, latest
           registry: docker.io
           dockerfile: ../.
